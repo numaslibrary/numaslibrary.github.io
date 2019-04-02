@@ -1,0 +1,43 @@
+body {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 400;
+}
+
+@media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}
+
+.navbar {
+    font-weight: 600;
+    margin-bottom: 5em;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-brand > img {
+    height: 60px;
+    padding: 15px;
+    width: auto;
+}
+
+.btn-primary {
+    background-color: #0025ff;
+}
+
+.btn-primary:hover {
+    background-color: #0025aa;
+}
+
+.platform {
+    padding-top: 10px;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #fff;
+}
