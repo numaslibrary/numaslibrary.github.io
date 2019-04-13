@@ -41,3 +41,7 @@ body {
 .navbar-light .navbar-toggler {
     border-color: #fff;
 }
+
+.feature {
+    padding-bottom: 20px;
+}

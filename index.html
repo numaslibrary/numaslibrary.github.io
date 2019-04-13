@@ -30,10 +30,10 @@
                         <a class="nav-link" href="#">Get Started</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Documentation</a>
+                        <a class="nav-link" href="https://docs.rs/numas/0.1.6/numas/">Documentation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                 </ul>
             </div>
@@ -44,8 +44,9 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-8 order-lg-1">
-                    <div class="">
+                    <div class="feature">
                         <h2 class="display-4">Multiplatform numerical library</h2>
+                        <hr>
                         <p>Leveraging speed of WebAssembly or Rust to achieve better performance for multidimensional array manipulation and calculations.</p>
                         <a href="#" class="btn btn-primary btn-lg">Get started</a>
                         <a class="navbar-brand mx-3" href="https://github.com/numaslibrary" target="_blank">
@@ -62,6 +63,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <h2>Pick your platform</h2>
+                    <hr>
                     <div class="container">
                         <div class="row platform">
                         <div class="col-lg-4 p-1">
@@ -72,7 +74,7 @@
                         </div>
                         <div class="col-lg-4 p-1">
                             <a href="https://crates.io/crates/numas" class="btn btn-primary btn-block" target="_blank">Rust</a>
-                            <a href="https://docs.rs/numas/0.1.4/numas/" class="text-muted" target="_blank">Documentation</a>
+                            <a href="https://docs.rs/numas/0.1.6/numas/" class="text-muted" target="_blank">Documentation</a>
                         </div>
                         </div>
                     </div>
@@ -85,12 +87,48 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-4"></div>
-                <div class="col-lg-8 order-lg-2"><div class="">
-                    <h2 class="display-4">Lorem ipsum dolor sit amet, consectetur</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>                    
-                </div></div>
+                <div class="col-lg-8 order-lg-2">
+                    <div class="">
+                        <h2 class="display-4">Features</h2>
+                        <hr>
+                        <div class="feature">
+                            <h4 class="display-5">Multidimensional array support</h4>
+                            <p>The core of numas is array that store element and can be n-dimensional and any size.</p>    
+                        </div>     
+                        <div class="feature">
+                            <h4 class="display-5">View into array</h4>
+                            <p>It's possible to create view into any array. That view is implemented also as numas array, so it's possible to perform the same operations on it.</p>    
+                        </div>
+                        <div class="feature">
+                            <h4 class="display-5">Operators</h4>
+                            <p>Numas arrays support arithmetic and relational operators. For example add, multiply, divide etc.</p>    
+                        </div>     
+                        <div class="feature">
+                            <h4 class="display-5">Factories</h4>
+                            <p>Last but not least there are some factories functions provided for simpler initializing new array, such as full, random, zeros, linspace, logspace and others.</p>    
+                        </div>     
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 order-lg-1">
+                    <div class="">
+                        <a name="about"></a><h2 class="display-4">About</h2>
+                        <hr>
+                        <p>
+                            Numas library is library written in Rust. The main Rust package is designed to be used in another Rust applications, for another
+                            platforms there is numas.wasm, that is WebAssembly wrapper for Rust, but is limited to only few datatypes (due to WebAssembly limitation).
+                            Implementation for concrete platfrom is numas.js that implements JavaScript interface for numas.wasm and enables fast processing in JavaScript applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </section>
 
     <footer class="page-footer font-small">
