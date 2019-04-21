@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>numas</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:400,600" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/site.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+</head>
+<body>
+    <section>
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 order-lg-1">
+                    <div class="feature">
+                        <h2 class="display-4">Demo of numas.js is avaible via browser console</h2>
+                        <hr />
+                        <a href="index.html" class="btn btn-primary btn-lg">Go back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 order-lg-1">
+                    <div class="feature">
+                        <h2 class="display-4">Examples</h2>
+                        <hr />
+                        <p>Simple arithmetic</p>
+                        <pre>
+                            <p>
+let a = numas.NDArray.new([1, 2, 3, 4], [2, 2])
+let b = numas.factory.ones([2, 2])
+let c = a.add(b)
+console.log(c.collect())
+                            </p>
+                        </pre>
+                        <hr />
+
+                        <p>Using views</p>
+                        <pre>
+                            <p>  
+let long = numas.NDArray.new([1,2,3,4,5,6,7,8,9], [3, 3])
+//create view array 'long' pointing to first row, second and third column
+let view = long.get([0, [1, 3]]) 
+console.log(view.collect())      // View contains [2, 3]
+console.log(long.collect())
+
+let short = numas.factory.ones([2])
+view.addAssign(short)           // Add to view without creating new array
+console.log(view.collect())     // View now contains [3, 4]
+console.log(long.collect())     // Addition to view is reflected into it's "parent"
+                            </p>
+                        </pre>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 order-lg-1">
+                    <div class="feature">
+                        <h2 class="display-4">Avaible methods</h2>
+                        <hr />
+                        <p>Factory</p>
+                        <pre><p>
+ones(shape, datatype = 'i32')
+zeros(shape, datatype = 'i32')
+zeroes(shape, datatype = 'i32')
+full(value, shape, datatype = 'i32')
+
+logspace(start, stop, base, num)
+linspace(start, stop, num)
+arange(start, stop, step)     
+                        </p></pre>
+                        <p>NDArray</p>
+                        <pre><p>new(data, shape, datatype = 'i32')</p></pre>
+                        <p>Instance of NDArray</p>
+                        <pre><p>• General
+
+collect()
+get(indices)
+set(value, indices)
+free()
+type()
+len()
+baseLen()
+clone()
+view()
+
+• Arithmetic
+
+add(other)
+addAssign(other)
+sub(other)
+subAssign(other)
+mul(other)
+mulAssign(other)
+div(other)
+divAssign(other)
+
+• Relational
+
+eq(other)
+neq(other)
+lt(other)
+gt(other)
+le(other)
+ge(other)
+
+• Trigonometric
+
+sin()
+cos()
+arcsin()
+arccos()
+arctan()
+degrees()
+radians() 
+rad2deg()
+deg2rad()
+
+• Misc
+
+sqrt()
+
+• Logarithm
+
+loge()
+log2() 
+log10()
+log(base)
+
+• Reducers
+
+sum()
+prod()
+
+• Roudning
+
+round(base)
+floor(base)
+ceil(base)
+trunc(base)
+                        </p></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

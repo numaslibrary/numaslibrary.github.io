@@ -1,0 +1,26 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "Github pages of numas library",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numaslibrary/pages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/numaslibrary/pages/issues"
+  },
+  "homepage": "https://github.com/numaslibrary/pages#readme",
+  "dependencies": {
+    "numas": "^0.1.8"
+  },
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
