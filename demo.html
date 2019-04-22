@@ -42,6 +42,11 @@ let a = numas.NDArray.new([1, 2, 3, 4], [2, 2])
 let b = numas.factory.ones([2, 2])
 let c = a.add(b)
 console.log(c.collect())
+
+// It's also possible to use broadcasting for array of length one
+let u = numas.NDArray.new([10], [1])
+let z = a.mul(u)
+console.log(z.collect())
                             </p>
                         </pre>
                         <hr />
