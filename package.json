@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/numaslibrary/pages#readme",
   "dependencies": {
-    "numas": "^0.1.9"
+    "numas": "^0.2.0"
   },
   "devDependencies": {
     "webpack": "^4.30.0",
